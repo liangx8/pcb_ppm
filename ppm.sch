@@ -19,7 +19,7 @@ L Switch:SW_DIP_x01 SW1
 U 1 1 5C8C0475
 P 6950 2600
 F 0 "SW1" H 6950 2867 50  0000 C CNN
-F 1 "PC0" H 6950 2776 50  0000 C CNN
+F 1 "PC2" H 6950 2776 50  0000 C CNN
 F 2 "Button_Switch_SMD:SW_SPST_CK_RS282G05A3" H 6950 2600 50  0001 C CNN
 F 3 "" H 6950 2600 50  0001 C CNN
 	1    6950 2600
@@ -41,7 +41,7 @@ L Switch:SW_DIP_x01 SW3
 U 1 1 5C8C0532
 P 6950 3650
 F 0 "SW3" H 6950 3917 50  0000 C CNN
-F 1 "PC2" H 6950 3826 50  0000 C CNN
+F 1 "PC0" H 6950 3826 50  0000 C CNN
 F 2 "Button_Switch_SMD:SW_SPST_CK_RS282G05A3" H 6950 3650 50  0001 C CNN
 F 3 "" H 6950 3650 50  0001 C CNN
 	1    6950 3650
@@ -208,11 +208,11 @@ Text Label 6000 1850 0    50   ~ 0
 led2
 Text Label 6000 2250 0    50   ~ 0
 led3
-Text Label 6000 2600 0    50   ~ 0
+Text Label 6000 3650 0    50   ~ 0
 PC0
 Text Label 6000 3100 0    50   ~ 0
 PC1
-Text Label 6000 3650 0    50   ~ 0
+Text Label 6000 2600 0    50   ~ 0
 PC2
 Entry Wire Line
 	5700 6000 5800 6100
@@ -226,13 +226,13 @@ Entry Wire Line
 	5700 4900 5800 5000
 Entry Wire Line
 	5700 5000 5800 5100
-Text Label 6250 4800 0    50   ~ 0
-mosi
-Text Label 6250 4900 0    50   ~ 0
-rst
-Text Label 6250 5000 0    50   ~ 0
-sck
 Text Label 6250 5100 0    50   ~ 0
+mosi
+Text Label 6250 4800 0    50   ~ 0
+rst
+Text Label 6250 4900 0    50   ~ 0
+sck
+Text Label 6250 5000 0    50   ~ 0
 miso
 Entry Wire Line
 	5600 2900 5700 2800
@@ -250,11 +250,11 @@ Entry Wire Line
 	5700 2500 5600 2600
 Entry Wire Line
 	5700 2600 5600 2700
-Text Label 5200 2500 0    50   ~ 0
+Text Label 5200 2700 0    50   ~ 0
 led1
 Text Label 5200 2600 0    50   ~ 0
 led2
-Text Label 5200 2700 0    50   ~ 0
+Text Label 5200 2500 0    50   ~ 0
 led3
 Entry Wire Line
 	5700 3300 5600 3400
@@ -349,7 +349,6 @@ Wire Wire Line
 Connection ~ 8250 2850
 Wire Wire Line
 	8250 2850 8250 2900
-NoConn ~ 4950 3700
 NoConn ~ 4950 4600
 NoConn ~ 4950 4700
 NoConn ~ 4950 4800
@@ -789,11 +788,17 @@ Wire Wire Line
 	2450 5700 2950 5700
 Wire Wire Line
 	1500 4050 1800 4050
+Connection ~ 1800 4050
+Wire Wire Line
+	1800 4050 2150 4050
+Entry Wire Line
+	5600 3700 5700 3600
+Wire Wire Line
+	5600 3700 4950 3700
+Text Label 5000 3700 0    50   ~ 0
+PC3
 Wire Bus Line
 	3050 4200 3050 6550
 Wire Bus Line
 	5700 1250 5700 6550
-Connection ~ 1800 4050
-Wire Wire Line
-	1800 4050 2150 4050
 $EndSCHEMATC
